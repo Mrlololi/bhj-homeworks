@@ -8,4 +8,4 @@ const interval = setInterval(() => {
         alert("Вы победили в конкурсе");
         clearInterval(interval);
     }
-}, 10);
+}, 1000);
