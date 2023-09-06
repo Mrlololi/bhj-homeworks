@@ -11,6 +11,7 @@ const dropdownValue = document.querySelectorAll(".dropdown__link");
 
 for(let i = 0; i < dropdownValue.length; i++){
     dropdownValue[i].addEventListener("click", function() {
+        event.preventDefault();
         changeValue(dropdownValue[i].textContent);
     });
 }
