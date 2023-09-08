@@ -1,7 +1,7 @@
 const dropdownList = document.querySelector(".dropdown__list");
 const dropdownRealValue = document.querySelector(".dropdown__value");
 
-document.addEventListener("click", dropdownListToggle)
+dropdownRealValue.addEventListener("click", dropdownListToggle)
 
 function dropdownListToggle(){
     dropdownList.classList.toggle("dropdown__list_active")
@@ -10,9 +10,10 @@ function dropdownListToggle(){
 const dropdownValue = document.querySelectorAll(".dropdown__link");
 
 for(let i = 0; i < dropdownValue.length; i++){
-    dropdownValue[i].addEventListener("click", function() {
+    dropdownValue[i].addEventListener("click", function(event) {
         event.preventDefault();
-        changeValue(dropdownValue[i].textContent);
+        event.stopPropagation();
+        changeValue(dropdownValue[i].textContent);    
     });
 }
 
