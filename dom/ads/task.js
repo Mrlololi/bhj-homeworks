@@ -15,7 +15,6 @@ function infiniteLoop(){
             rotatorCase[currentIndex].style.color = rotatorCase[currentIndex].getAttribute('data-color');
         }, 1000);
 
-
 }
 
 infiniteLoop()
