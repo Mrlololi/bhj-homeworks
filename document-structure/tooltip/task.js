@@ -11,4 +11,9 @@ hasTooltip.forEach(element => {
         newElement.classList.toggle("tooltip_active")
         e.preventDefault();
     })
+    element.addEventListener("scroll", (e) => {
+        newElement.classList.remove("tooltip_active")
+        e.preventDefault();
+    })
+
 });
