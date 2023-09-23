@@ -8,18 +8,18 @@ fetch('https://students.netoservices.ru/nestjs-backend/slow-get-courses')
     
     for (let currency in data.response.Valute) {
       const currencyDiv = document.createElement('div');
-      currencyDiv.className = 'item';
+      currencyDiv.classList.add('item');
 
       const codeDiv = document.createElement('div');
-      codeDiv.className = 'item__code';
+      codeDiv.classList.add('item__code');
       codeDiv.textContent = data.response.Valute[currency].CharCode;
 
       const valueDiv = document.createElement('div');
-      valueDiv.className = 'item__value';
+      valueDiv.classList.add('item__value');
       valueDiv.textContent = data.response.Valute[currency].Value;
 
       const currencyNameDiv = document.createElement('div');
-      currencyNameDiv.className = 'item__currency';
+      currencyNameDiv.classList.add('item__currency');
       currencyNameDiv.textContent = 'руб.';
 
       currencyDiv.appendChild(codeDiv);
@@ -28,4 +28,4 @@ fetch('https://students.netoservices.ru/nestjs-backend/slow-get-courses')
 
       items.appendChild(currencyDiv);
     }
-  })
+  });
